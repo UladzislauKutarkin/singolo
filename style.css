@@ -193,13 +193,13 @@ html {
 .sliderRed {
     border-bottom: 6px solid #ea676b;
     background-color: #f06c64;
-    transition: 3s;
+    transition: 1s;
 }
 
 .sliderBlue {
     border-bottom: 6px solid #5a84f0;
     background-color: #5173cb;
-    transition: 3s;
+    transition: 1s;
 }
 
 .sliderContent {
@@ -248,9 +248,6 @@ html {
 
 .sliderItemActive,
 .sliderItemNext {
-    display: block;
-}
-.show {
     display: block;
 }
 
@@ -324,7 +321,6 @@ html {
     right: 211px;
     z-index: 1;
 }
-
 
 /*SERVICES*/
 
