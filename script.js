@@ -7,7 +7,7 @@ window.onload = function () {
 //Открываем меню бургер
 
     BURGER.addEventListener('click', (e) => {
-        if (BURGER.classList.contains('headerBurgerButtonActive') ) {
+        if (BURGER.classList.contains('headerBurgerButtonActive')) {
             BURGER.classList.remove('headerBurgerButtonActive');
             document.getElementById('mobileMenu').classList.add('headerMobileMenuHidden');
             BODY.classList.remove('scroll-hidden');
@@ -18,8 +18,11 @@ window.onload = function () {
         }
     })
 }
-
-
-    //Делаем переключение слайдов
-
-
+ const img = document.querySelectorAll('.portfolioPhotoGridItem');
+    const randomButton = document.querySelectorAll('.portfolioTabsItem').forEach(randomButton => {
+        randomButton.addEventListener('click', (e) => {
+            img[0].classList.add("imgChange");
+            img[1].classList.add("imgChange");
+            img[2].classList.add("imgChange");
+        })
+    })

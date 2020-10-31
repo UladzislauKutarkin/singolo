@@ -496,15 +496,21 @@ html {
     grid-gap: 20px 20px;
 }
 
-.portfolioPhotoGridItem {
-    max-width: 300px;
+.portfolioPhotoGrid {
+    max-width: 1020px;
     width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    transition: all 0.5s ease;
-
-
+    /*max-height: 601px;*/
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px 20px;
 }
+.imgChange {
+    order: 1;
+}
+
+
+
 
 .portfolioPhotoGridItem:hover {
     opacity: 0.6;
