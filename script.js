@@ -3,7 +3,10 @@ window.onload = function () {
     const MENU = document.getElementById('menu');
     const MOBILE_MENU = document.querySelector('.headerMobileMenu');
     const BURGER = document.getElementById('burger');
-
+    let arrowNext= document.getElementById('arrow-next');
+    let slidersDisplay=document.querySelector('.sliderItemFrontSlide');
+    let slidersBackDisplay=document.querySelector('.sliderItemBackSlide');
+    let  arrowPrev= document.getElementById('arrow-prev');
 
 //Открываем меню бургер
 
@@ -18,6 +21,24 @@ window.onload = function () {
             BODY.classList.add('scroll-hidden');
         }
     })
+
+    arrowNext.addEventListener('click', (e) => {
+        slidersDisplay.style.display='none'
+        slidersBackDisplay.style.display= 'block'
+    })
+
+    arrowPrev.addEventListener('click', (e) => {
+        slidersDisplay.style.display='block'
+        slidersBackDisplay.style.display= 'none'
+    })
+    randomButton.addEventListener('click', (e) => {
+        if (randomButton.classList.contains('portfolioTabsItemActive')) {
+            randomButton.classList.remove ('portfolioTabsItemActive')
+        } else {
+            randomButton.classList.add('portfolioTabsItemActive')
+        }
+    })
+
 }
     let min=0;
     let max=10;
@@ -32,10 +53,5 @@ window.onload = function () {
 
         })
     })
-        randomButton.addEventListener('click', (e) => {
-            if (randomButton.classList.contains('portfolioTabsItemActive')) {
-                randomButton.classList.remove ('portfolioTabsItemActive')
-        } else {
-                randomButton.classList.add('portfolioTabsItemActive')
-            }
-        })
+
+

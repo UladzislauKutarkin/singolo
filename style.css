@@ -237,12 +237,10 @@ html {
 
 .sliderItem {
     position: relative;
-    display: none;
     animation: 1s ease-in-out;
 }
 
-.sliderItemActive,
-.sliderItemNext {
+.sliderItemActive{
     display: block;
 }
 
