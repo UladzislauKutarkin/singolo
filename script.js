@@ -4,6 +4,7 @@ window.onload = function () {
     const MOBILE_MENU = document.querySelector('.headerMobileMenu');
     const BURGER = document.getElementById('burger');
 
+
 //Открываем меню бургер
 
     BURGER.addEventListener('click', (e) => {
@@ -18,11 +19,18 @@ window.onload = function () {
         }
     })
 }
- const img = document.querySelectorAll('.portfolioPhotoGridItem');
-    const randomButton = document.querySelectorAll('.portfolioTabsItem').forEach(randomButton => {
+    let min=0;
+    let max=10;
+    let randomNumber = function (min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    let img = document.querySelectorAll('.portfolioPhotoGridItem');
+
+        randomButton = document.querySelectorAll('.portfolioTabsItem').forEach(randomButton => {
         randomButton.addEventListener('click', (e) => {
-            img[0].classList.add("imgChange");
-            img[1].classList.add("imgChange");
-            img[2].classList.add("imgChange");
+            img[3].style.order = randomNumber(min, max);
+            img[1].style.order = randomNumber(min, max);
+            img[2].style.order = randomNumber(min, max);
         })
     })
+
