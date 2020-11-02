@@ -28,9 +28,14 @@ window.onload = function () {
 
         randomButton = document.querySelectorAll('.portfolioTabsItem').forEach(randomButton => {
         randomButton.addEventListener('click', (e) => {
-            img[3].style.order = randomNumber(min, max);
-            img[1].style.order = randomNumber(min, max);
-            img[2].style.order = randomNumber(min, max);
+            img.forEach(img => img.style.order = randomNumber(min,max))
+
         })
     })
-
+        randomButton.addEventListener('click', (e) => {
+            if (randomButton.classList.contains('portfolioTabsItemActive')) {
+                randomButton.classList.remove ('portfolioTabsItemActive')
+        } else {
+                randomButton.classList.add('portfolioTabsItemActive')
+            }
+        })
