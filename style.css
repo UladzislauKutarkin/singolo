@@ -405,6 +405,7 @@ html {
     width: 100%;
     background: #2d303a;
     border-bottom: solid 6px #323746;
+    overflow: hidden;
 }
 
 .portfolioContent {
@@ -415,6 +416,7 @@ html {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .portfolioTitle {
@@ -987,7 +989,7 @@ html {
     .portfolioPhotoGrid {
         display: -ms-grid;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 13px 14px;
     }
 
